@@ -37,6 +37,9 @@
       display: grid;
       grid-gap: 20px;
       border: 10px solid var(--yellow);
+      /*  auto-fill tells it to figure out how many items to fit in as columns, adds extra columns
+          auto-fit, fits the columns to the grid */
+      grid-template-columns: repeat(auto-fill, 150px);
     }
   </style>
 </body>
