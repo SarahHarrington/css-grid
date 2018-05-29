@@ -169,7 +169,7 @@
     }
 
     function randomNumber(limit) {
-      return Math.floor(Math.random() * limit) + 1
+      return Math.floor(Math.random() * limit) + 1;
     }
 
     function handleClick(e) {
@@ -180,15 +180,12 @@
     }
 
     function close() {
-      console.log('close clicked')
       overlay.classList.remove('open');
     }
 
     const digits = Array.from({ length: 50 }, () => [randomNumber(4), randomNumber(4)]).concat([[1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1]])
-
-    console.log(digits);
     
-    const html = digits.map(generateHTML);
+    const html = digits.map(generateHTML).join('');
     gallery.innerHTML = html;
 
     const items = document.querySelectorAll('.item');
